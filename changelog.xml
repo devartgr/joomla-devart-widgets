@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<changelogs>
+
+    <changelog>
+        <element>com_devartwidgets</element>
+        <type>component</type>
+        <version>1.6.3</version>
+
+        <fix>
+            <item>Fixed dashboard widget cache clear action using proper Joomla CSRF protected administrator workflow</item>
+            <item>Fixed administrator cache clear button token submission behavior</item>
+            <item>Fixed dashboard cache tools integration consistency</item>
+        </fix>
+
+        <change>
+            <item>Final production hardening release for DevArt Widgets GitHub distribution</item>
+            <item>Improved administrator maintenance workflow consistency</item>
+        </change>
+
+        <note>
+            <item>Production release</item>
+            <item>Recommended update for all DevArt Widgets installations</item>
+            <item>No frontend widget rendering or template behavior changes in this release</item>
+        </note>
+    </changelog>
+
+    <changelog>
+        <element>com_devartwidgets</element>
+        <type>component</type>
+        <version>1.6.0</version>
+
+        <addition>
+            <item>Added preserve original widget IDs during import and restore workflows when possible</item>
+            <item>Added Keep Data uninstall option for production-safe uninstall behavior</item>
+            <item>Added controlled rollback friendly package update workflow</item>
+            <item>Added frontend widget cache management tools in administrator dashboard</item>
+            <item>Added widget cache status visibility in dashboard</item>
+        </addition>
+
+        <change>
+            <item>Improved import and export backup restore workflows for production deployments</item>
+            <item>Improved operational safety for upgrades, restores and rollback scenarios</item>
+            <item>Improved administrator dashboard production maintenance tools</item>
+            <item>Improved cache-first architecture for high traffic Joomla environments</item>
+        </change>
+
+        <note>
+            <item>Major production hardening release</item>
+            <item>Recommended for all production DevArt Widgets deployments</item>
+        </note>
+    </changelog>
+
+    <changelog>
+        <element>com_devartwidgets</element>
+        <type>component</type>
+        <version>1.5.0</version>
+
+        <addition>
+            <item>Added full Joomla 6 native DevArt Widgets component with modern MVC architecture</item>
+            <item>Added DevArt Widget frontend module integration</item>
+            <item>Added professional editorial widget builder architecture</item>
+            <item>Added widget manager with create and edit workflows</item>
+            <item>Added widget duplication support</item>
+            <item>Added widget import and export functionality</item>
+            <item>Added multiple editorial frontend templates</item>
+            <item>Added custom items support for widget content</item>
+            <item>Added category filtering support</item>
+            <item>Added selected article support</item>
+            <item>Added latest article source support</item>
+            <item>Added featured filtering support</item>
+            <item>Added current article exclusion support</item>
+            <item>Added global configuration support</item>
+            <item>Added dashboard administrator interface</item>
+            <item>Added Joomla ACL permissions support</item>
+            <item>Added GitHub-based Joomla native update support</item>
+        </addition>
+
+        <change>
+            <item>Architecture designed specifically for Joomla 6 and PHP 8.2+</item>
+            <item>Frontend rendering optimized for lightweight cache-safe production output</item>
+            <item>Widget rendering optimized for Joomla Page Cache compatibility</item>
+            <item>Frontend output optimized for Cloudflare and CDN friendly deployments</item>
+            <item>CSS and JavaScript namespaced to minimize template conflicts</item>
+            <item>Administrator UI migrated to modern DevArt production design</item>
+        </change>
+
+        <security>
+            <item>Added SQL injection protection using Joomla database APIs and parameterized queries</item>
+            <item>Added XSS protection through proper output escaping</item>
+            <item>Added CSRF protection for administrator actions</item>
+            <item>Added ACL enforcement for administrator operations</item>
+            <item>Added controlled cache file handling workflows</item>
+        </security>
+
+        <note>
+            <item>Initial public production release of DevArt Widgets for Joomla 6</item>
+            <item>Designed for editorial, magazine, portal and high traffic Joomla websites</item>
+            <item>Always test on staging before production deployment</item>
+        </note>
+    </changelog>
+
+</changelogs>
