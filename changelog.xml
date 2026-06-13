@@ -4,6 +4,39 @@
     <changelog>
         <element>com_devartwidgets</element>
         <type>component</type>
+        <version>1.6.4</version>
+
+        <addition>
+            <item>Added automatic thumbnail cache retention cleanup based on Thumbnail Retention Days setting</item>
+            <item>Added Clean Old Thumbnails maintenance tool</item>
+            <item>Added Clear Thumbnail Cache maintenance tool</item>
+            <item>Added thumbnail cache statistics visibility in administrator dashboard</item>
+        </addition>
+
+        <fix>
+            <item>Fixed inactive Thumbnail Retention Days setting which was previously stored but not enforced</item>
+            <item>Fixed long-term thumbnail cache growth on high volume websites</item>
+        </fix>
+
+        <change>
+            <item>Implemented administrator-only thumbnail cleanup workflow</item>
+            <item>Added throttled maintenance execution to reduce filesystem overhead on large installations</item>
+            <item>Improved thumbnail cache lifecycle management for production environments</item>
+            <item>Improved long-term storage efficiency for generated thumbnail files</item>
+        </change>
+
+        <note>
+            <item>Recommended update for all DevArt Widgets installations</item>
+            <item>No database schema changes introduced</item>
+            <item>No frontend widget rendering changes in this release</item>
+            <item>No template behavior changes in this release</item>
+            <item>Focused maintenance and cache management release</item>
+        </note>
+    </changelog>
+
+    <changelog>
+        <element>com_devartwidgets</element>
+        <type>component</type>
         <version>1.6.3</version>
 
         <fix>
