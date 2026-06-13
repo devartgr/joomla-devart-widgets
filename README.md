@@ -1,27 +1,27 @@
 # DevArt Widgets for Joomla
 
-Professional Joomla 6 widgets package for editorial, magazine, portal, and high-performance content websites.
+Professional Joomla 6 widgets package for editorial, magazine, portal, business, and high-performance content websites.
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.2%2B-green)
-![Release](https://img.shields.io/badge/Version-1.6.3-orange)
+![Release](https://img.shields.io/badge/Version-1.6.4-orange)
 ![License](https://img.shields.io/badge/License-GPLv3-red)
 
 ---
 
 ## Overview
 
-DevArt Widgets is a modern Joomla 6 native widgets package built for editorial websites, magazines, portals, newspapers, and high-traffic content environments.
+DevArt Widgets is a modern Joomla 6 native widget builder designed for editorial websites, magazines, portals, newspapers, corporate websites, and high-traffic production environments.
 
-It provides lightweight cache-first frontend rendering, professional editorial widget templates, production-safe import/export workflows, administrator dashboard tools, and modern Joomla 6 architecture.
+Create professional frontend content blocks using multiple templates, flexible content sources, cache-first rendering, production-safe import/export tools, and modern Joomla 6 architecture.
 
-Designed specifically for Joomla 6 with strict typing, clean MVC architecture, and zero legacy baggage.
+Built specifically for Joomla 6 and PHP 8.2+ with strict typing, modern MVC architecture, and enterprise-oriented performance principles.
 
 ---
 
 ## Features
 
-### Professional Editorial Templates
+### Professional Widget Templates
 
 Included templates:
 
@@ -38,102 +38,152 @@ Included templates:
 - Numbered Top Stories
 - Minimal Editorial List
 
-Use cases:
+Perfect for:
 
-- homepage editorial blocks
-- latest news sections
-- magazine landing pages
-- category featured blocks
+- homepage content blocks
+- featured article sections
+- category highlights
+- editorial landing pages
 - sidebar widgets
-- trending story blocks
-- compact article lists
-- breaking news sections
-- mobile-friendly editorial layouts
+- trending content
+- magazine layouts
+- portal front pages
+- mobile-friendly article lists
 
 ---
 
 ### Flexible Content Sources
 
-Widget sources:
+Supported content sources:
 
 - Latest Articles
 - Selected Articles
-- Category Filtered Articles
+- Category Articles
 - Featured Articles
-- Current Article Context
+- Related Articles
 - Custom Items
 
 Filtering options:
 
 - category filtering
 - featured filtering
-- ordering controls
-- article limits
+- article ordering
+- maximum items
 - skip offset
 - exclude current article
-- publication-aware article selection
+- publication-aware selection
 
 ---
 
-### Cache-first Frontend Performance
+### Custom Items Builder
 
-Built for production and high traffic environments.
+Create completely custom widget content without Joomla articles.
+
+Supported fields:
+
+- Title
+- Subtitle
+- Intro Text
+- Image
+- Link
+- Link Target
+- Badge Label
+- Read More Text
+- Optional Date
 
 Features:
 
-- frontend widget query caching
+- add unlimited custom items
+- drag-style ordering controls
+- move up / move down support
+- template compatible rendering
+
+---
+
+### Cache-first Frontend Architecture
+
+Designed for high-traffic production environments.
+
+Features:
+
+- widget query caching
 - configurable cache duration
-- hard performance limits
-- Joomla Page Cache friendly rendering
-- Cloudflare friendly frontend behavior
-- CDN-friendly output
+- cache-safe rendering
+- Joomla Page Cache compatibility
+- Cloudflare friendly output
+- CDN friendly rendering
 - minimal frontend overhead
-- lightweight CSS rendering
-- no heavy frontend frameworks
+- lightweight CSS architecture
+- no frontend database writes
+
+---
+
+### Thumbnail Cache Management
+
+Production-safe thumbnail lifecycle management.
+
+Features:
+
+- automatic thumbnail retention cleanup
+- configurable Thumbnail Retention Days setting
+- administrator-only maintenance execution
+- throttled cleanup workflow
+- thumbnail cache statistics dashboard
+- manual thumbnail cleanup tools
+- full thumbnail cache clear tools
+
+Designed to prevent uncontrolled thumbnail growth while avoiding frontend performance impact.
 
 ---
 
 ### Production-safe Import / Export
 
-Backup-safe administrator workflows.
+Backup and migration friendly workflows.
 
 Features:
 
 - widget export
 - widget import
 - preserve original widget IDs when possible
-- safe fallback import if ID conflict exists
-- restore-friendly production workflows
+- safe fallback import
+- restore-friendly workflows
+- production migration support
 
-This prevents module assignments from breaking during widget restore scenarios.
+Helps prevent module assignment issues during backup restore and migration operations.
 
 ---
 
 ### Administrator Features
 
-- Dashboard production management interface
-- Widget manager
-- Create / Edit widgets
-- Duplicate widgets
-- Import / Export widgets
-- Template overview
-- Global configuration
-- Cache management tools
-- Widget cache clear action
-- Dashboard cache status visibility
-- Joomla ACL permissions support
+- Dashboard interface
+- Widget Manager
+- Create Widgets
+- Edit Widgets
+- Duplicate Widgets
+- Import Widgets
+- Export Widgets
+- Template Overview
+- Global Configuration
+- Cache Tools
+- Thumbnail Maintenance Tools
+- Cache Status Visibility
+- Joomla ACL Permissions
 
 ---
 
 ### Production Safety
 
-Operational hardening included:
+Operational hardening included.
+
+Features:
 
 - Keep Data uninstall option
-- controlled rollback / downgrade-friendly workflow
-- non-destructive update behavior
-- safe widget restore workflows
-- cache-safe frontend rendering strategy
+- rollback-friendly updates
+- non-destructive update workflows
+- safe widget restore operations
+- controlled cache handling
+- thumbnail retention management
+- administrator-only maintenance operations
 
 ---
 
@@ -155,15 +205,15 @@ This package installs:
 
 ## Installation
 
-1. Download latest release
+1. Download the latest release
 2. Open:
 
-`System → Extensions → Install`
+   `System → Extensions → Install`
 
-3. Upload package ZIP
+3. Upload the package ZIP
 4. Open:
 
-`Components → DevArt Widgets`
+   `Components → DevArt Widgets`
 
 5. Create widgets
 6. Publish module instances
@@ -172,7 +222,7 @@ This package installs:
 
 ## Joomla Native Updates
 
-Supports Joomla native updates via GitHub.
+Supports Joomla native updates through GitHub.
 
 Update location:
 
@@ -186,38 +236,41 @@ Update server:
 
 ## Performance
 
-Designed for production and high-traffic environments.
+Designed for production deployments and high-traffic websites.
 
 Features:
 
 - widget query caching
 - cache-first rendering
 - minimal frontend overhead
-- safe repeated rendering
 - widget-level cache isolation
 - lightweight frontend CSS
-- CDN-friendly output
+- Cloudflare friendly output
+- CDN friendly rendering
+- administrator-only maintenance operations
 
 Suitable for:
 
 - editorial websites
-- magazine portals
-- news websites
+- newspapers
+- magazines
+- portals
+- business websites
 - content-heavy Joomla installations
-- high traffic production deployments
+- high-traffic production environments
 
 ---
 
 ## Security Highlights
 
 - Joomla ACL support
-- CSRF-safe administrator actions
+- CSRF protected administrator actions
 - Joomla query builder protection
-- XSS-safe rendering
+- XSS-safe output rendering
 - strict input validation
 - namespaced architecture
-- JED-ready packaging
 - safe cache file handling
+- JED-ready packaging
 
 ---
 
@@ -227,78 +280,88 @@ Supported:
 
 - Joomla 6.x
 - PHP 8.2+
-- Joomla native update system
-- modern Joomla MVC architecture
+- Joomla Native Update System
+- Modern Joomla MVC Architecture
 
-Not supported:
+Not Supported:
 
 - Joomla 3
 - Joomla 4
 - Joomla 5
-- legacy PHP versions
+- Legacy PHP versions
 
 ---
 
 ## Current Version
 
-1.6.3
+### 1.6.4
 
 ---
 
 ## Changelog Highlights
 
+### v1.6.4
+
+Added:
+
+- automatic thumbnail retention cleanup
+- thumbnail cache maintenance tools
+- thumbnail cache statistics dashboard
+- configurable thumbnail lifecycle management
+
+Fixed:
+
+- inactive Thumbnail Retention Days setting
+- uncontrolled thumbnail cache growth
+
+Improved:
+
+- long-term thumbnail cache management
+- administrator maintenance workflows
+
 ### v1.6.3
 
 Fixed:
 
-- dashboard widget cache clear CSRF workflow
-- administrator cache maintenance action consistency
+- dashboard cache clear CSRF workflow
+- cache maintenance consistency
 
 ### v1.6.0
 
 Added:
 
-- preserve original widget IDs during restore
+- preserve original widget IDs
 - Keep Data uninstall option
-- rollback-friendly production workflow
+- rollback-friendly update workflows
 - dashboard cache tools
-
-### Initial Release
-
-Included:
-
-- professional editorial widget templates
-- import / export workflows
-- widget duplication
-- dashboard administrator interface
-- cache-first frontend rendering
-- Joomla ACL permissions
-- GitHub updater support
 
 ---
 
 ## Production Recommendations
 
-Recommended defaults:
+Recommended settings:
 
 Frontend:
 
 - enable widget caching
 - keep Joomla caching enabled
-- use one widget per editorial block
+- use cache-first rendering
+- optimize images before upload
 
 Infrastructure:
 
-- Joomla Page Cache
 - Cloudflare CDN
+- Joomla Cache
 - PHP OPcache
-- production image optimization
+- modern PHP versions
+- SSD storage
 
 ---
 
 ## Known Notes
 
-- Always test template integration with your Joomla template and cache stack before production deployment
+- Always test updates on a staging environment before deploying to production.
+- Thumbnail retention cleanup operates only from the Joomla administrator area and never during frontend rendering.
 
 ---
 
@@ -306,7 +369,7 @@ Infrastructure:
 
 Kostas Stathopoulos  
 DevArt  
-https://devart.gr/
+https://devart.gr
 
 GitHub Repository:
 
@@ -318,11 +381,9 @@ https://github.com/devartgr/joomla-devart-widgets
 
 This software is provided "as is", without warranty of any kind.
 
-DevArt shall not be liable for data loss, downtime, rendering issues, cache conflicts, production failures, or issues resulting from use or misuse.
+DevArt shall not be liable for data loss, downtime, rendering issues, cache conflicts, production failures, or issues resulting from use or misuse of this software.
 
-Always test in staging before production deployment.
-
-Maintain proper backups.
+Always test on staging environments before production deployment and maintain proper backups.
 
 ---
 
