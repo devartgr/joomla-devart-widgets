@@ -4,7 +4,7 @@ Professional Joomla 6 widgets package for editorial, magazine, portal, business,
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.2%2B-green)
-![Release](https://img.shields.io/badge/Version-1.6.4-orange)
+![Release](https://img.shields.io/badge/Version-1.6.5-orange)
 ![License](https://img.shields.io/badge/License-GPLv3-red)
 
 ---
@@ -13,7 +13,7 @@ Professional Joomla 6 widgets package for editorial, magazine, portal, business,
 
 DevArt Widgets is a modern Joomla 6 native widget builder designed for editorial websites, magazines, portals, newspapers, corporate websites, and high-traffic production environments.
 
-Create professional frontend content blocks using multiple templates, flexible content sources, cache-first rendering, production-safe import/export tools, and modern Joomla 6 architecture.
+Create professional frontend content blocks using multiple templates, flexible content sources, cache-first rendering, production-safe import/export tools, responsive typography controls, template-specific customization options, and modern Joomla 6 architecture.
 
 Built specifically for Joomla 6 and PHP 8.2+ with strict typing, modern MVC architecture, and enterprise-oriented performance principles.
 
@@ -100,6 +100,63 @@ Features:
 
 ---
 
+### Template and Theme Controls
+
+DevArt Widgets includes template-aware settings designed to keep the administrator interface clean and avoid unnecessary options.
+
+Features:
+
+- theme presets
+- custom theme mode
+- custom title color
+- custom intro color
+- custom meta color
+- custom read more color
+- custom badge background color
+- custom badge text color
+- overlay opacity controls for supported templates
+- overlay direction controls for supported templates
+- template-specific option visibility
+- cleaner administrator workflows
+
+---
+
+### Responsive Typography
+
+Frontend text can be adjusted for mobile devices without changing desktop design.
+
+Features:
+
+- responsive mobile text option
+- mobile text scale control
+- desktop typography controls
+- rem-based typography settings
+- template-safe frontend rendering
+
+---
+
+### Image Handling
+
+Image handling is designed for predictable frontend layouts.
+
+Supported image modes:
+
+- Crop
+- Original
+
+Features:
+
+- crop-based thumbnails for stable layouts
+- original image mode for selected use cases
+- lazy loading support
+- crop position controls
+- thumbnail generation
+- template-safe image rendering
+
+The experimental Resize mode was removed in v1.6.5 to preserve stable card, grid, and editorial layouts.
+
+---
+
 ### Cache-first Frontend Architecture
 
 Designed for high-traffic production environments.
@@ -108,6 +165,7 @@ Features:
 
 - widget query caching
 - configurable cache duration
+- module cache settings
 - cache-safe rendering
 - Joomla Page Cache compatibility
 - Cloudflare friendly output
@@ -242,6 +300,7 @@ Features:
 
 - widget query caching
 - cache-first rendering
+- module-level cache options
 - minimal frontend overhead
 - widget-level cache isolation
 - lightweight frontend CSS
@@ -294,11 +353,47 @@ Not Supported:
 
 ## Current Version
 
-### 1.6.4
+### 1.6.5
 
 ---
 
 ## Changelog Highlights
+
+### v1.6.5
+
+Added:
+
+- responsive mobile text option
+- mobile text scale control
+- frontend module cache configuration options
+- overlay opacity controls for supported templates
+- overlay direction controls for supported templates
+- expanded custom theme color support
+
+Fixed:
+
+- Hero + Secondary Grid renderer issues
+- Numbered Top Stories renderer issues
+- Minimal Editorial List renderer issues
+- custom theme option visibility issues
+- frontend rendering inconsistencies
+- mobile layout issues in selected templates
+
+Improved:
+
+- template-specific option visibility
+- mobile rendering consistency
+- Numbered Top Stories image presentation
+- Timeline Editorial layout behavior
+- Hero + Secondary Grid overlay handling
+- custom theme rendering consistency
+- frontend typography responsiveness
+- overall template stability
+
+Changed:
+
+- removed experimental Resize image mode
+- retained Crop and Original image modes for predictable frontend rendering
 
 ### v1.6.4
 
@@ -344,9 +439,11 @@ Recommended settings:
 Frontend:
 
 - enable widget caching
+- configure module cache where needed
 - keep Joomla caching enabled
 - use cache-first rendering
 - optimize images before upload
+- use Crop mode for stable editorial layouts
 
 Infrastructure:
 
@@ -362,6 +459,7 @@ Infrastructure:
 
 - Always test updates on a staging environment before deploying to production.
 - Thumbnail retention cleanup operates only from the Joomla administrator area and never during frontend rendering.
+- Some templates use fixed internal image sizing for stable editorial presentation.
 
 ---
 
