@@ -4,6 +4,53 @@
     <changelog>
         <element>com_devartwidgets</element>
         <type>component</type>
+        <version>1.6.5</version>
+
+        <addition>
+            <item>Added Responsive Mobile Text option for frontend widgets</item>
+            <item>Added Mobile Text Scale control for improved mobile typography</item>
+            <item>Added frontend module cache configuration options</item>
+            <item>Added overlay opacity controls for supported overlay templates</item>
+            <item>Added overlay direction controls for supported overlay templates</item>
+            <item>Added expanded custom theme color support across additional templates</item>
+        </addition>
+
+        <fix>
+            <item>Fixed Hero Plus Secondary Grid renderer errors</item>
+            <item>Fixed Numbered Top Stories renderer errors</item>
+            <item>Fixed Minimal Editorial List renderer errors</item>
+            <item>Fixed custom theme option visibility issues across multiple templates</item>
+            <item>Fixed template specific configuration edge cases</item>
+            <item>Fixed various frontend rendering inconsistencies</item>
+            <item>Fixed mobile layout issues in selected templates</item>
+        </fix>
+
+        <change>
+            <item>Removed experimental Resize image mode</item>
+            <item>Retained Crop and Original image modes for more predictable frontend rendering</item>
+            <item>Improved template specific option visibility throughout the administrator interface</item>
+            <item>Improved mobile rendering consistency across multiple templates</item>
+            <item>Improved image presentation in Numbered Top Stories</item>
+            <item>Improved Timeline Editorial layout behavior</item>
+            <item>Improved Hero Plus Secondary Grid overlay handling</item>
+            <item>Improved custom theme rendering consistency</item>
+            <item>Improved frontend typography responsiveness</item>
+            <item>Improved overall template stability and presentation</item>
+        </change>
+
+        <note>
+            <item>Recommended update for all DevArt Widgets installations</item>
+            <item>No database schema changes introduced</item>
+            <item>No migration steps required</item>
+            <item>Maintains cache first architecture for high traffic Joomla websites</item>
+            <item>Cloudflare friendly rendering retained</item>
+            <item>Template refinement, mobile improvements and stability release</item>
+        </note>
+    </changelog>
+
+    <changelog>
+        <element>com_devartwidgets</element>
+        <type>component</type>
         <version>1.6.4</version>
 
         <addition>
@@ -15,14 +62,14 @@
 
         <fix>
             <item>Fixed inactive Thumbnail Retention Days setting which was previously stored but not enforced</item>
-            <item>Fixed long-term thumbnail cache growth on high volume websites</item>
+            <item>Fixed long term thumbnail cache growth on high volume websites</item>
         </fix>
 
         <change>
-            <item>Implemented administrator-only thumbnail cleanup workflow</item>
+            <item>Implemented administrator only thumbnail cleanup workflow</item>
             <item>Added throttled maintenance execution to reduce filesystem overhead on large installations</item>
             <item>Improved thumbnail cache lifecycle management for production environments</item>
-            <item>Improved long-term storage efficiency for generated thumbnail files</item>
+            <item>Improved long term storage efficiency for generated thumbnail files</item>
         </change>
 
         <note>
@@ -64,7 +111,7 @@
 
         <addition>
             <item>Added preserve original widget IDs during import and restore workflows when possible</item>
-            <item>Added Keep Data uninstall option for production-safe uninstall behavior</item>
+            <item>Added Keep Data uninstall option for production safe uninstall behavior</item>
             <item>Added controlled rollback friendly package update workflow</item>
             <item>Added frontend widget cache management tools in administrator dashboard</item>
             <item>Added widget cache status visibility in dashboard</item>
@@ -72,9 +119,9 @@
 
         <change>
             <item>Improved import and export backup restore workflows for production deployments</item>
-            <item>Improved operational safety for upgrades, restores and rollback scenarios</item>
+            <item>Improved operational safety for upgrades restores and rollback scenarios</item>
             <item>Improved administrator dashboard production maintenance tools</item>
-            <item>Improved cache-first architecture for high traffic Joomla environments</item>
+            <item>Improved cache first architecture for high traffic Joomla environments</item>
         </change>
 
         <note>
@@ -105,12 +152,12 @@
             <item>Added global configuration support</item>
             <item>Added dashboard administrator interface</item>
             <item>Added Joomla ACL permissions support</item>
-            <item>Added GitHub-based Joomla native update support</item>
+            <item>Added GitHub based Joomla native update support</item>
         </addition>
 
         <change>
             <item>Architecture designed specifically for Joomla 6 and PHP 8.2+</item>
-            <item>Frontend rendering optimized for lightweight cache-safe production output</item>
+            <item>Frontend rendering optimized for lightweight cache safe production output</item>
             <item>Widget rendering optimized for Joomla Page Cache compatibility</item>
             <item>Frontend output optimized for Cloudflare and CDN friendly deployments</item>
             <item>CSS and JavaScript namespaced to minimize template conflicts</item>
@@ -127,7 +174,7 @@
 
         <note>
             <item>Initial public production release of DevArt Widgets for Joomla 6</item>
-            <item>Designed for editorial, magazine, portal and high traffic Joomla websites</item>
+            <item>Designed for editorial magazine portal and high traffic Joomla websites</item>
             <item>Always test on staging before production deployment</item>
         </note>
     </changelog>
