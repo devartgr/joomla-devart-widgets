@@ -4,16 +4,18 @@ Professional Joomla 6 widgets package for editorial, magazine, portal, business,
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.2%2B-green)
-![Release](https://img.shields.io/badge/Version-1.6.5-orange)
+![Release](https://img.shields.io/badge/Version-1.7.0-orange)
 ![License](https://img.shields.io/badge/License-GPLv3-red)
 
 ---
 
 ## Overview
 
-DevArt Widgets is a modern Joomla 6 native widget builder designed for editorial websites, magazines, portals, newspapers, corporate websites, and high-traffic production environments.
+DevArt Widgets is a modern Joomla 6 native widget builder designed for editorial websites, magazines, portals, newspapers, corporate websites, business directories, and high-traffic production environments.
 
-Create professional frontend content blocks using multiple templates, flexible content sources, cache-first rendering, production-safe import/export tools, responsive typography controls, template-specific customization options, and modern Joomla 6 architecture.
+Create professional frontend content blocks using multiple templates, flexible content sources, cache-first rendering, production-safe import/export tools, responsive typography controls, template-aware customization, and modern Joomla 6 architecture.
+
+Version **1.7.0** introduces the first **multi-source architecture**, allowing the same rendering engine and templates to display content from both Joomla Articles and DevArt Business.
 
 Built specifically for Joomla 6 and PHP 8.2+ with strict typing, modern MVC architecture, and enterprise-oriented performance principles.
 
@@ -41,20 +43,23 @@ Included templates:
 Perfect for:
 
 - homepage content blocks
-- featured article sections
+- featured sections
 - category highlights
 - editorial landing pages
 - sidebar widgets
 - trending content
 - magazine layouts
+- business listings
 - portal front pages
-- mobile-friendly article lists
+- responsive content blocks
 
 ---
 
-### Flexible Content Sources
+## Multiple Content Sources
 
-Supported content sources:
+Supported sources:
+
+### Joomla Content
 
 - Latest Articles
 - Selected Articles
@@ -63,19 +68,25 @@ Supported content sources:
 - Related Articles
 - Custom Items
 
-Filtering options:
+### DevArt Business
 
-- category filtering
-- featured filtering
-- article ordering
-- maximum items
-- skip offset
-- exclude current article
-- publication-aware selection
+New in **v1.7.0**
+
+Display business directory content using exactly the same templates already available for Joomla Articles.
+
+Business source supports:
+
+- All Business Categories
+- Selected Business Categories
+- Include Child Categories
+- Ordering
+- Maximum Items
+
+When DevArt Business is selected, the administrator interface automatically hides article-specific options for a cleaner configuration experience.
 
 ---
 
-### Custom Items Builder
+## Custom Items Builder
 
 Create completely custom widget content without Joomla articles.
 
@@ -93,51 +104,58 @@ Supported fields:
 
 Features:
 
-- add unlimited custom items
-- drag-style ordering controls
-- move up / move down support
+- unlimited custom items
+- move up / move down ordering
 - template compatible rendering
 
 ---
 
-### Template and Theme Controls
+## Unified Rendering Engine
 
-DevArt Widgets includes template-aware settings designed to keep the administrator interface clean and avoid unnecessary options.
+One rendering engine powers every supported source.
+
+The same frontend templates automatically work with:
+
+- Joomla Articles
+- DevArt Business
+
+Future DevArt applications can reuse the same architecture without requiring additional frontend templates.
+
+---
+
+## Template and Theme Controls
+
+DevArt Widgets includes template-aware administrator options designed to keep the interface clean.
 
 Features:
 
 - theme presets
 - custom theme mode
-- custom title color
-- custom intro color
-- custom meta color
-- custom read more color
-- custom badge background color
-- custom badge text color
-- overlay opacity controls for supported templates
-- overlay direction controls for supported templates
-- template-specific option visibility
-- cleaner administrator workflows
+- custom colors
+- overlay opacity
+- overlay direction
+- template-aware option visibility
+- source-aware option visibility
+
+Only relevant settings are displayed depending on the selected template and content source.
 
 ---
 
-### Responsive Typography
+## Responsive Typography
 
-Frontend text can be adjusted for mobile devices without changing desktop design.
+Frontend text can be adjusted independently for mobile devices.
 
 Features:
 
-- responsive mobile text option
-- mobile text scale control
+- responsive mobile text
+- mobile text scale
 - desktop typography controls
-- rem-based typography settings
-- template-safe frontend rendering
+- rem-based typography
+- template-safe rendering
 
 ---
 
-### Image Handling
-
-Image handling is designed for predictable frontend layouts.
+## Image Handling
 
 Supported image modes:
 
@@ -146,108 +164,94 @@ Supported image modes:
 
 Features:
 
-- crop-based thumbnails for stable layouts
-- original image mode for selected use cases
-- lazy loading support
-- crop position controls
+- predictable editorial layouts
+- crop positioning
+- lazy loading
 - thumbnail generation
 - template-safe image rendering
 
-The experimental Resize mode was removed in v1.6.5 to preserve stable card, grid, and editorial layouts.
+The experimental Resize mode was removed to ensure consistent frontend layouts.
 
 ---
 
-### Cache-first Frontend Architecture
+## Cache-first Architecture
 
-Designed for high-traffic production environments.
+Designed for high-traffic Joomla websites.
 
 Features:
 
 - widget query caching
 - configurable cache duration
-- module cache settings
-- cache-safe rendering
+- module cache support
 - Joomla Page Cache compatibility
 - Cloudflare friendly output
 - CDN friendly rendering
 - minimal frontend overhead
-- lightweight CSS architecture
+- lightweight CSS
 - no frontend database writes
 
 ---
 
-### Thumbnail Cache Management
+## Thumbnail Cache Management
 
 Production-safe thumbnail lifecycle management.
 
 Features:
 
-- automatic thumbnail retention cleanup
-- configurable Thumbnail Retention Days setting
-- administrator-only maintenance execution
-- throttled cleanup workflow
-- thumbnail cache statistics dashboard
-- manual thumbnail cleanup tools
-- full thumbnail cache clear tools
-
-Designed to prevent uncontrolled thumbnail growth while avoiding frontend performance impact.
+- automatic cleanup
+- configurable retention
+- administrator-only maintenance
+- throttled cleanup
+- dashboard statistics
+- manual cleanup tools
+- full thumbnail cache clear
 
 ---
 
-### Production-safe Import / Export
+## Production-safe Import / Export
 
-Backup and migration friendly workflows.
+Designed for backups and migrations.
 
 Features:
 
 - widget export
 - widget import
-- preserve original widget IDs when possible
-- safe fallback import
+- preserve original IDs
 - restore-friendly workflows
 - production migration support
 
-Helps prevent module assignment issues during backup restore and migration operations.
-
 ---
 
-### Administrator Features
+## Administrator Features
 
-- Dashboard interface
+- Dashboard
 - Widget Manager
 - Create Widgets
-- Edit Widgets
 - Duplicate Widgets
-- Import Widgets
-- Export Widgets
+- Import / Export
 - Template Overview
 - Global Configuration
 - Cache Tools
-- Thumbnail Maintenance Tools
-- Cache Status Visibility
-- Joomla ACL Permissions
+- Thumbnail Maintenance
+- Cache Status
+- Joomla ACL
 
 ---
 
-### Production Safety
+## Production Safety
 
-Operational hardening included.
-
-Features:
+Operational hardening includes:
 
 - Keep Data uninstall option
 - rollback-friendly updates
-- non-destructive update workflows
-- safe widget restore operations
+- non-destructive upgrades
+- safe restore workflows
 - controlled cache handling
-- thumbnail retention management
-- administrator-only maintenance operations
+- administrator-only maintenance
 
 ---
 
 ## Included Extensions
-
-This package installs:
 
 - com_devartwidgets
 - mod_devartwidget
@@ -263,28 +267,23 @@ This package installs:
 
 ## Installation
 
-1. Download the latest release
+1. Download the latest release.
 2. Open:
 
    `System → Extensions → Install`
 
-3. Upload the package ZIP
+3. Upload the package ZIP.
 4. Open:
 
    `Components → DevArt Widgets`
-
-5. Create widgets
-6. Publish module instances
+5. Create widgets.
+6. Publish module instances.
 
 ---
 
 ## Joomla Native Updates
 
-Supports Joomla native updates through GitHub.
-
-Update location:
-
-`System → Extensions → Update`
+Supports Joomla native updates via GitHub.
 
 Update server:
 
@@ -294,41 +293,39 @@ Update server:
 
 ## Performance
 
-Designed for production deployments and high-traffic websites.
+Designed for production deployments.
 
 Features:
 
 - widget query caching
 - cache-first rendering
-- module-level cache options
-- minimal frontend overhead
-- widget-level cache isolation
-- lightweight frontend CSS
+- module cache support
 - Cloudflare friendly output
 - CDN friendly rendering
-- administrator-only maintenance operations
+- lightweight frontend CSS
+- widget-level cache isolation
 
 Suitable for:
 
-- editorial websites
 - newspapers
 - magazines
+- editorial websites
 - portals
-- business websites
-- content-heavy Joomla installations
-- high-traffic production environments
+- business directories
+- corporate websites
+- high-traffic Joomla installations
 
 ---
 
 ## Security Highlights
 
-- Joomla ACL support
-- CSRF protected administrator actions
-- Joomla query builder protection
-- XSS-safe output rendering
-- strict input validation
+- Joomla ACL
+- CSRF protection
+- Joomla Query Builder
+- XSS-safe output
+- strict validation
 - namespaced architecture
-- safe cache file handling
+- safe cache handling
 - JED-ready packaging
 
 ---
@@ -339,127 +336,77 @@ Supported:
 
 - Joomla 6.x
 - PHP 8.2+
-- Joomla Native Update System
-- Modern Joomla MVC Architecture
+- Joomla Native Updates
+- Modern Joomla MVC
 
 Not Supported:
 
 - Joomla 3
 - Joomla 4
 - Joomla 5
-- Legacy PHP versions
+- Legacy PHP
 
 ---
 
 ## Current Version
 
-### 1.6.5
+### 1.7.0
 
 ---
 
 ## Changelog Highlights
 
-### v1.6.5
+### v1.7.0
 
 Added:
 
-- responsive mobile text option
-- mobile text scale control
-- frontend module cache configuration options
-- overlay opacity controls for supported templates
-- overlay direction controls for supported templates
-- expanded custom theme color support
-
-Fixed:
-
-- Hero + Secondary Grid renderer issues
-- Numbered Top Stories renderer issues
-- Minimal Editorial List renderer issues
-- custom theme option visibility issues
-- frontend rendering inconsistencies
-- mobile layout issues in selected templates
+- native DevArt Business source
+- Business Categories support
+- All Business Categories mode
+- unified business rendering engine
+- business support across all existing widget templates
 
 Improved:
 
-- template-specific option visibility
-- mobile rendering consistency
-- Numbered Top Stories image presentation
-- Timeline Editorial layout behavior
-- Hero + Secondary Grid overlay handling
-- custom theme rendering consistency
-- frontend typography responsiveness
-- overall template stability
+- multi-source architecture
+- source-aware administrator interface
+- automatic hiding of article-only options
+- consistency with DevArt Slider source handling
+- long-term platform extensibility
 
-Changed:
+Compatibility:
 
-- removed experimental Resize image mode
-- retained Crop and Original image modes for predictable frontend rendering
-
-### v1.6.4
-
-Added:
-
-- automatic thumbnail retention cleanup
-- thumbnail cache maintenance tools
-- thumbnail cache statistics dashboard
-- configurable thumbnail lifecycle management
-
-Fixed:
-
-- inactive Thumbnail Retention Days setting
-- uncontrolled thumbnail cache growth
-
-Improved:
-
-- long-term thumbnail cache management
-- administrator maintenance workflows
-
-### v1.6.3
-
-Fixed:
-
-- dashboard cache clear CSRF workflow
-- cache maintenance consistency
-
-### v1.6.0
-
-Added:
-
-- preserve original widget IDs
-- Keep Data uninstall option
-- rollback-friendly update workflows
-- dashboard cache tools
+- existing Joomla Articles widgets continue to work without changes
+- no database changes
+- no migration required
 
 ---
 
 ## Production Recommendations
 
-Recommended settings:
-
 Frontend:
 
 - enable widget caching
-- configure module cache where needed
-- keep Joomla caching enabled
-- use cache-first rendering
+- enable Joomla caching
+- use module cache where appropriate
 - optimize images before upload
-- use Crop mode for stable editorial layouts
+- use Crop mode for editorial layouts
 
 Infrastructure:
 
 - Cloudflare CDN
 - Joomla Cache
 - PHP OPcache
-- modern PHP versions
 - SSD storage
+- modern PHP versions
 
 ---
 
 ## Known Notes
 
-- Always test updates on a staging environment before deploying to production.
-- Thumbnail retention cleanup operates only from the Joomla administrator area and never during frontend rendering.
-- Some templates use fixed internal image sizing for stable editorial presentation.
+- Always test updates on staging before production deployment.
+- Thumbnail maintenance runs only from the Joomla administrator.
+- DevArt Business source requires the DevArt Business component to be installed.
 
 ---
 
@@ -481,7 +428,7 @@ This software is provided "as is", without warranty of any kind.
 
 DevArt shall not be liable for data loss, downtime, rendering issues, cache conflicts, production failures, or issues resulting from use or misuse of this software.
 
-Always test on staging environments before production deployment and maintain proper backups.
+Always test on staging before production deployment and maintain proper backups.
 
 ---
 
