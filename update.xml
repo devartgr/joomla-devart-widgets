@@ -11,7 +11,7 @@
         <downloads>
             <downloadurl type="full" format="zip">https://github.com/devartgr/joomla-devart-widgets/releases/download/v1.7.0/pkg_devartwidgets_v1.7.0.zip</downloadurl>
         </downloads>
-        <sha256>b3dc14647dcae179605548c6afb6bc1a61add638b12cb83ea4fefeed279cd30b</sha256>
+        <sha256>682b0b4f7695893c3ab2fcf36f687fe80a6d05ced2b13aa5719a92a403767403</sha256>
         <changelogurl>https://raw.githubusercontent.com/devartgr/joomla-devart-widgets/main/changelog.xml</changelogurl>
         <targetplatform name="joomla" version="6.*" />
         <php_minimum>8.2</php_minimum>
