@@ -4,6 +4,39 @@
     <changelog>
         <element>com_devartwidgets</element>
         <type>component</type>
+        <version>1.7.0</version>
+
+        <addition>
+            <item>Added native DevArt Business source support</item>
+            <item>Added Business Categories selection for DevArt Business widgets</item>
+            <item>Added All Business Categories mode for business source rendering</item>
+            <item>Added business content mapping into the existing DevArt Widgets rendering engine</item>
+            <item>Added support for displaying DevArt Business entries through all existing widget templates</item>
+        </addition>
+
+        <change>
+            <item>Improved multi source architecture for future DevArt applications</item>
+            <item>Improved source specific administrator option visibility</item>
+            <item>Automatically hides Joomla article specific data options when DevArt Business source is selected</item>
+            <item>Automatically hides article only content options such as author and date when DevArt Business source is selected</item>
+            <item>Preserved existing Joomla Articles source behavior without breaking changes</item>
+            <item>Improved consistency between DevArt Widgets and DevArt Slider source handling</item>
+        </change>
+
+        <note>
+            <item>Recommended update for all DevArt Widgets installations</item>
+            <item>No database schema changes introduced</item>
+            <item>No migration steps required</item>
+            <item>No breaking changes for existing Joomla Articles widgets</item>
+            <item>Existing widget templates continue to work with Joomla Articles as before</item>
+            <item>DevArt Business source requires DevArt Business to be installed when used</item>
+            <item>Major source expansion release for the DevArt ecosystem</item>
+        </note>
+    </changelog>
+
+    <changelog>
+        <element>com_devartwidgets</element>
+        <type>component</type>
         <version>1.6.5</version>
 
         <addition>
