@@ -4,6 +4,40 @@
     <changelog>
         <element>com_devartwidgets</element>
         <type>component</type>
+        <version>1.8.0</version>
+
+        <addition>
+            <item>Added native DevArt Events source support</item>
+            <item>Added Event Time filtering with Today, Upcoming, Past, All and Featured modes</item>
+            <item>Added Event Categories filtering for DevArt Events widgets</item>
+            <item>Added All Event Categories mode for event source rendering</item>
+            <item>Added support for displaying DevArt Events through all existing widget templates</item>
+            <item>Added unified event date handling based on the DevArt Events event date engine</item>
+        </addition>
+
+        <change>
+            <item>Expanded the multi source architecture with DevArt Events integration</item>
+            <item>Improved source specific administrator option visibility for Events</item>
+            <item>Removed manual ordering options for DevArt Events source in favor of automatic event date ordering</item>
+            <item>Automatically hides Joomla article specific options when DevArt Events source is selected</item>
+            <item>Maintains identical event selection logic across DevArt Events, DevArt Slider and DevArt Widgets</item>
+            <item>Preserved complete backward compatibility with Joomla Articles and DevArt Business sources</item>
+        </change>
+
+        <note>
+            <item>Recommended update for all DevArt Widgets installations</item>
+            <item>No database schema changes introduced</item>
+            <item>No migration steps required</item>
+            <item>No breaking changes for existing Joomla Articles, Custom Items or DevArt Business widgets</item>
+            <item>Existing widget templates continue to work across all supported content sources</item>
+            <item>DevArt Events source requires DevArt Events to be installed when used</item>
+            <item>Completes the first generation multi source architecture for the DevArt ecosystem</item>
+        </note>
+    </changelog>
+
+    <changelog>
+        <element>com_devartwidgets</element>
+        <type>component</type>
         <version>1.7.0</version>
 
         <addition>
