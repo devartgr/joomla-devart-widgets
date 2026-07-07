@@ -4,6 +4,45 @@
     <changelog>
         <element>com_devartwidgets</element>
         <type>component</type>
+        <version>1.8.4</version>
+
+        <addition>
+            <item>Added native DevArt Video source support</item>
+            <item>Added video category filtering with All Categories and Selected Categories modes</item>
+            <item>Added Include Child Categories option for video category filtering</item>
+            <item>Added Featured Handling option for videos with Include Featured, Featured Only and Exclude Featured modes</item>
+            <item>Added video ordering support with Newest and Oldest options</item>
+        </addition>
+
+        <change>
+            <item>Expanded the native multi source architecture with DevArt Video integration</item>
+            <item>Video items are normalized into the existing DevArt Widgets rendering pipeline</item>
+            <item>Video source uses the existing widget image handling and cache pipeline</item>
+            <item>Improved source specific administrator option visibility for Videos</item>
+            <item>Preserved complete backward compatibility with Joomla Articles, DevArt Business and DevArt Events sources</item>
+        </change>
+
+        <fix>
+            <item>Improved DevArt Video provider integration and compatibility</item>
+            <item>Improved video category filtering</item>
+            <item>Improved featured video handling</item>
+            <item>Improved video source query handling and stability</item>
+            <item>Various internal stability and compatibility improvements</item>
+        </fix>
+
+        <note>
+            <item>Recommended update for installations using DevArt Video</item>
+            <item>No database schema changes introduced</item>
+            <item>No migration steps required</item>
+            <item>No breaking changes for existing Joomla Articles, Custom Items, DevArt Business or DevArt Events widgets</item>
+            <item>Existing widget templates continue to work across all supported content sources</item>
+            <item>DevArt Video source requires DevArt Video to be installed when used</item>
+        </note>
+    </changelog>
+
+    <changelog>
+        <element>com_devartwidgets</element>
+        <type>component</type>
         <version>1.8.0</version>
 
         <addition>
