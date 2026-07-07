@@ -1,21 +1,21 @@
 # DevArt Widgets for Joomla
 
-Professional Joomla 6 widgets package for editorial, magazine, portal, business, events, and high-performance content websites.
+Professional Joomla 6 widgets package for editorial, magazine, portal, business, events, video, and high-performance content websites.
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.2%2B-green)
-![Release](https://img.shields.io/badge/Version-1.8.0-orange)
+![Release](https://img.shields.io/badge/Version-1.8.4-orange)
 ![License](https://img.shields.io/badge/License-GPLv3-red)
 
 ---
 
 ## Overview
 
-DevArt Widgets is a modern Joomla 6 native widget builder designed for editorial websites, magazines, portals, newspapers, corporate websites, business directories, event websites, and high-traffic production environments.
+DevArt Widgets is a modern Joomla 6 native widget builder designed for editorial websites, magazines, portals, newspapers, corporate websites, business directories, event websites, video portals, and high-traffic production environments.
 
 Create professional frontend content blocks using multiple templates, multiple native content sources, cache-first rendering, production-safe import/export tools, responsive typography controls, template-aware customization, and modern Joomla 6 architecture.
 
-Version **1.8.0** completes the first generation of the **DevArt multi-source rendering architecture**, allowing the same rendering engine and frontend templates to display Joomla Articles, DevArt Business, DevArt Events and Custom Items.
+Version **1.8.4** adds native **DevArt Video** source support to the existing multi-source architecture, allowing the same rendering engine and frontend templates to display Joomla Articles, DevArt Business, DevArt Events, DevArt Video, and Custom Items.
 
 Built specifically for Joomla 6 and PHP 8.2+ with strict typing, modern MVC architecture, and enterprise-oriented performance principles.
 
@@ -51,6 +51,7 @@ Perfect for:
 - magazine layouts
 - business listings
 - event listings
+- video listings
 - portal front pages
 - responsive content blocks
 
@@ -81,9 +82,7 @@ Business-specific administrator options are displayed automatically while articl
 
 ### DevArt Events
 
-**New in v1.8.0**
-
-Display event listings using exactly the same widget templates.
+Display event listings using the same widget templates.
 
 Event source supports:
 
@@ -101,6 +100,28 @@ Category options:
 - Maximum Items
 
 Event ordering is handled automatically using the same event date logic as DevArt Events.
+
+### DevArt Video
+
+**New in v1.8.4**
+
+Display video content using the existing widget templates.
+
+Video source supports:
+
+- All Video Categories
+- Selected Video Categories
+- Include Child Categories
+- Featured Handling
+  - Include Featured
+  - Featured Only
+  - Exclude Featured
+- Ordering
+  - Newest
+  - Oldest
+- Maximum Items
+
+Video-specific administrator options are displayed automatically while unrelated article-only options are hidden.
 
 ### Custom Items
 
@@ -129,6 +150,7 @@ Supported sources:
 - Joomla Articles
 - DevArt Business
 - DevArt Events
+- DevArt Video
 - Custom Items
 
 All frontend templates automatically work across every supported content source without requiring separate template implementations.
@@ -284,6 +306,7 @@ Features:
 4. Open:
 
    `Components → DevArt Widgets`
+
 5. Create widgets.
 6. Publish module instances.
 
@@ -321,6 +344,7 @@ Suitable for:
 - portals
 - business directories
 - event websites
+- video portals
 - corporate websites
 - high-traffic Joomla installations
 
@@ -359,35 +383,36 @@ Not Supported:
 
 ## Current Version
 
-### 1.8.0
+### 1.8.4
 
 ---
 
 ## Changelog Highlights
 
-### v1.8.0
+### v1.8.4
 
 Added:
 
-- native DevArt Events source
-- Today, Upcoming, Past, All and Featured event filtering
-- Event Categories support
-- All Event Categories mode
-- unified event-date rendering using the DevArt Events engine
-- event support across all existing widget templates
+- native DevArt Video source
+- video category filtering
+- Include Child Categories support for videos
+- Featured Handling for videos
+- Newest / Oldest video ordering
+- video support across existing widget templates
 
 Improved:
 
-- expanded multi-source architecture
+- expanded multi-source architecture with DevArt Video
 - source-aware administrator interface
-- automatic hiding of article-only options
-- unified event selection across DevArt Events, Slider and Widgets
-- long-term platform extensibility
+- automatic hiding of unrelated article-only options
+- unified rendering across Articles, Business, Events and Video sources
+- provider compatibility and frontend consistency
 
 Compatibility:
 
 - existing Joomla Articles widgets continue to work unchanged
 - existing DevArt Business widgets continue to work unchanged
+- existing DevArt Events widgets continue to work unchanged
 - no database changes
 - no migration required
 
@@ -419,6 +444,7 @@ Infrastructure:
 - Thumbnail maintenance runs only from the Joomla administrator.
 - DevArt Business source requires DevArt Business when used.
 - DevArt Events source requires DevArt Events when used.
+- DevArt Video source requires DevArt Video when used.
 
 ---
 
