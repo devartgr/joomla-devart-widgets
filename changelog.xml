@@ -2,6 +2,22 @@
 <changelogs>
 
     <changelog>
+        <element>pkg_devartwidgets</element>
+        <type>package</type>
+        <version>1.9.1</version>
+
+        <change>
+            <item>Joomla native updates now target the package only (pkg_devartwidgets, site client)</item>
+            <item>Removed duplicate update servers from the component, module and content plugin</item>
+        </change>
+
+        <note>
+            <item>Install this package ZIP on existing sites once; later updates use Joomla native package updates</item>
+            <item>Requires Joomla 6.0+ and PHP 8.3.0+</item>
+        </note>
+    </changelog>
+
+    <changelog>
         <element>com_devartwidgets</element>
         <type>component</type>
         <version>1.9.0</version>
