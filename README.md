@@ -4,7 +4,7 @@ Professional Joomla 6 widgets package for editorial, magazine, portal, business,
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.3%2B-green)
-![Release](https://img.shields.io/badge/Version-1.9.0-orange)
+![Release](https://img.shields.io/badge/Version-1.9.1-orange)
 ![License](https://img.shields.io/badge/License-GPLv3-red)
 
 ---
@@ -15,7 +15,9 @@ DevArt Widgets is a modern Joomla 6 native widget builder designed for editorial
 
 Create professional frontend content blocks using multiple templates, multiple native content sources, Custom Lists, cache-first rendering, production-safe import/export tools, responsive typography controls, template-aware customization, and modern Joomla 6 architecture.
 
-Version **1.9.0** adds **Categories vs Specific items** selection, Slider-style lightweight pickers, and reusable **Custom Lists** that mix Joomla Articles, DevArt Business, DevArt Events, and DevArt Video. Legacy Manual/Mixed widgets normalise to Custom Lists. Existing category-based widgets keep working without re-save.
+Version **1.9.0** added **Categories vs Specific items** selection, Slider-style lightweight pickers, and reusable **Custom Lists** that mix Joomla Articles, DevArt Business, DevArt Events, and DevArt Video. Legacy Manual/Mixed widgets normalise to Custom Lists. Existing category-based widgets keep working without re-save.
+
+Version **1.9.1** uses Joomla native package updates only (`pkg_devartwidgets`, site client). Existing sites should install this package ZIP once. Later versions are found by Joomla Update.
 
 Built specifically for Joomla 6 and PHP 8.3+ with strict typing, modern MVC architecture, and enterprise-oriented performance principles.
 
@@ -327,9 +329,19 @@ Features:
 
 Supports Joomla native updates through GitHub.
 
+Updates are advertised for the package only:
+
+- element: `pkg_devartwidgets`
+- type: `package`
+- client: `site`
+
 Update server:
 
 `https://raw.githubusercontent.com/devartgr/joomla-devart-widgets/main/update.xml`
+
+The component, module, and content plugin do not register their own update servers.
+
+Existing sites should install the `1.9.1` package ZIP once. Later versions are found by Joomla Update. If leftover DevArt Widgets update-site rows remain after install, use Rebuild Update Sites.
 
 ---
 
@@ -394,11 +406,25 @@ Not Supported:
 
 ## Current Version
 
-### 1.9.0
+### 1.9.1
 
 ---
 
 ## Changelog Highlights
+
+### v1.9.1
+
+Changed:
+
+- Joomla native updates now target `pkg_devartwidgets` with client `site`
+- component, module, and content plugin no longer declare update servers
+
+Notes:
+
+- install this package ZIP on existing sites once
+- later updates use Joomla native package updates
+- Rebuild Update Sites if leftover DevArt Widgets update-site rows remain
+- requires Joomla 6.0+ and PHP 8.3.0+
 
 ### v1.9.0
 
@@ -464,6 +490,7 @@ Infrastructure:
 - DevArt Events source requires DevArt Events when used.
 - DevArt Video source requires DevArt Video when used.
 - Legacy Manual/Mixed widgets normalise to Custom Lists until a list is selected.
+- Existing sites should install the `1.9.1` package ZIP once before later Joomla native updates.
 
 ---
 
