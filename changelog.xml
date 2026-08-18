@@ -4,6 +4,49 @@
     <changelog>
         <element>com_devartwidgets</element>
         <type>component</type>
+        <version>1.9.0</version>
+
+        <addition>
+            <item>Added Categories vs Specific items selection for Articles, Business, Events and Video sources</item>
+            <item>Added Slider-style lightweight ID search pickers for specific items</item>
+            <item>Added reusable Custom Lists mixing native sources with per-item display flags</item>
+            <item>Added Custom Lists administrator header, footer and teal active submenu styling</item>
+        </addition>
+
+        <change>
+            <item>Replaced Manual and Mixed widget sources with Custom list selection</item>
+            <item>Legacy manual and mixed widgets normalise to Custom until a list is selected</item>
+            <item>Import and export now store lists and list items instead of widget-bound custom items</item>
+            <item>Language filters apply only when Joomla Language Filter or multilanguage is enabled</item>
+            <item>Articles random ordering now samples a bounded ID set instead of SQL RAND()</item>
+            <item>Widget query cache moved to Joomla cache instead of web-accessible media</item>
+        </change>
+
+        <fix>
+            <item>Fixed specific-item pickers so Video, Events and Business open the selected source</item>
+            <item>Fixed leftover specific items remaining after a widget source type change</item>
+            <item>Fixed Add selected so chosen items are added and the picker closes</item>
+            <item>Improved first Articles and Categories frontend load on large sites</item>
+            <item>Improved Events first query by hydrating intros only after time-filter and limit</item>
+            <item>Content plugin {devartwidget} replacement now runs on the site client only</item>
+            <item>Import preserve-IDs now requires core.admin</item>
+        </fix>
+
+        <note>
+            <item>Recommended update for all DevArt Widgets installations</item>
+            <item>Upgrade-safe for existing production widgets</item>
+            <item>Existing widget rows are not rewritten</item>
+            <item>Custom Lists tables are additive only</item>
+            <item>Frontend cache is purged after update</item>
+            <item>Category-based Articles, Business, Events and Video widgets keep working without re-save</item>
+            <item>Requires Joomla 6.0+ and PHP 8.3.0+</item>
+            <item>DevArt Business, DevArt Events and DevArt Video sources require the corresponding extensions when used</item>
+        </note>
+    </changelog>
+
+    <changelog>
+        <element>com_devartwidgets</element>
+        <type>component</type>
         <version>1.8.4</version>
 
         <addition>
