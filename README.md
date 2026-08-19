@@ -4,7 +4,7 @@ Professional Joomla 6 widgets package for editorial, magazine, portal, business,
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.3%2B-green)
-![Release](https://img.shields.io/badge/Version-1.9.1-orange)
+![Release](https://img.shields.io/badge/Version-1.9.2-orange)
 ![License](https://img.shields.io/badge/License-GPLv3-red)
 
 ---
@@ -17,7 +17,9 @@ Create professional frontend content blocks using multiple templates, multiple n
 
 Version **1.9.0** added **Categories vs Specific items** selection, Slider-style lightweight pickers, and reusable **Custom Lists** that mix Joomla Articles, DevArt Business, DevArt Events, and DevArt Video. Legacy Manual/Mixed widgets normalise to Custom Lists. Existing category-based widgets keep working without re-save.
 
-Version **1.9.1** uses Joomla native package updates only (`pkg_devartwidgets`, site client). Existing sites should install this package ZIP once. Later versions are found by Joomla Update.
+Version **1.9.1** uses Joomla native package updates only (`pkg_devartwidgets`, site client). Existing sites should install a `1.9.1` or later package ZIP once. Later versions are found by Joomla Update.
+
+Version **1.9.2** adds administrator and site language packs for Greek, French, German, Spanish, Italian, and Portuguese.
 
 Built specifically for Joomla 6 and PHP 8.3+ with strict typing, modern MVC architecture, and enterprise-oriented performance principles.
 
@@ -308,6 +310,22 @@ Features:
 
 ---
 
+## Languages
+
+Packaged translations:
+
+- English (`en-GB`)
+- Greek (`el-GR`)
+- French (`fr-FR`)
+- German (`de-DE`)
+- Spanish (`es-ES`)
+- Italian (`it-IT`)
+- Portuguese (`pt-PT`)
+
+Coverage includes the component (administrator and site), module, content plugin, and package.
+
+---
+
 ## Installation
 
 1. Download the latest release.
@@ -341,7 +359,7 @@ Update server:
 
 The component, module, and content plugin do not register their own update servers.
 
-Existing sites should install the `1.9.1` package ZIP once. Later versions are found by Joomla Update. If leftover DevArt Widgets update-site rows remain after install, use Rebuild Update Sites.
+Existing sites should install a `1.9.1` or later package ZIP once. Later versions are found by Joomla Update. If leftover DevArt Widgets update-site rows remain after install, use Rebuild Update Sites.
 
 ---
 
@@ -406,11 +424,22 @@ Not Supported:
 
 ## Current Version
 
-### 1.9.1
+### 1.9.2
 
 ---
 
 ## Changelog Highlights
+
+### v1.9.2
+
+Added:
+
+- administrator, site, module, plugin, and package translations for Greek, French, German, Spanish, Italian, and Portuguese
+- packaged languages: `en-GB`, `el-GR`, `fr-FR`, `de-DE`, `es-ES`, `it-IT`, `pt-PT`
+
+Notes:
+
+- requires Joomla 6.0+ and PHP 8.3.0+
 
 ### v1.9.1
 
@@ -490,7 +519,7 @@ Infrastructure:
 - DevArt Events source requires DevArt Events when used.
 - DevArt Video source requires DevArt Video when used.
 - Legacy Manual/Mixed widgets normalise to Custom Lists until a list is selected.
-- Existing sites should install the `1.9.1` package ZIP once before later Joomla native updates.
+- Existing sites should install a `1.9.1` or later package ZIP once before later Joomla native updates.
 
 ---
 
