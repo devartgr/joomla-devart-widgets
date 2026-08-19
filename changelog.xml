@@ -4,6 +4,21 @@
     <changelog>
         <element>pkg_devartwidgets</element>
         <type>package</type>
+        <version>1.9.2</version>
+
+        <addition>
+            <item>Added administrator, site, module, plugin and package language files for Greek, French, German, Spanish, Italian and Portuguese</item>
+        </addition>
+
+        <note>
+            <item>Packaged languages: en-GB, el-GR, fr-FR, de-DE, es-ES, it-IT, pt-PT</item>
+            <item>Requires Joomla 6.0+ and PHP 8.3.0+</item>
+        </note>
+    </changelog>
+
+    <changelog>
+        <element>pkg_devartwidgets</element>
+        <type>package</type>
         <version>1.9.1</version>
 
         <change>
