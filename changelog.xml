@@ -4,6 +4,51 @@
     <changelog>
         <element>pkg_devartwidgets</element>
         <type>package</type>
+        <version>1.9.4</version>
+
+        <change>
+            <item>Limited widget edit form control width to match DevArt Slider</item>
+            <item>Reordered widget edit Data tab fields to match DevArt Slider</item>
+            <item>Added Featured handling for DevArt Events source</item>
+            <item>Added Business category mode, Featured handling, and Ordering like DevArt Slider</item>
+            <item>Renamed source type label Custom to Custom List</item>
+            <item>Moved Content tab next to Data with Simple/Advanced options like DevArt Slider</item>
+            <item>Content Advanced includes Author/Date extras and responsive mobile text; Typography tab removed</item>
+            <item>Moved layout columns/gap/radius into the Template tab and removed the Layout tab</item>
+            <item>Added Orange theme; new widgets default to Red; Custom theme includes working color defaults</item>
+            <item>Widgets list filters and Trash/Delete behaviour aligned with DevArt Slider</item>
+            <item>Admin headers without box shadow; Import Widgets button matches DevArt Slider</item>
+            <item>Added Custom items Data source with inline repeatable list and native Joomla media</item>
+            <item>Custom items support Image/Video media type, poster, and per-item Play/Pause or None video controls</item>
+        </change>
+
+        <note>
+            <item>Requires Joomla 6.0+ and PHP 8.3.0+</item>
+        </note>
+    </changelog>
+
+    <changelog>
+        <element>pkg_devartwidgets</element>
+        <type>package</type>
+        <version>1.9.3</version>
+
+        <addition>
+            <item>Added Access and Language fields to the widget Basic tab</item>
+        </addition>
+
+        <change>
+            <item>Centered the widget edit administrator footer to match DevArt Slider</item>
+        </change>
+
+        <note>
+            <item>Access and Language values were already stored and applied on frontend rendering</item>
+            <item>Requires Joomla 6.0+ and PHP 8.3.0+</item>
+        </note>
+    </changelog>
+
+    <changelog>
+        <element>pkg_devartwidgets</element>
+        <type>package</type>
         <version>1.9.2</version>
 
         <addition>
