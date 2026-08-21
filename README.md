@@ -4,7 +4,7 @@ Professional Joomla 6 widgets package for editorial, magazine, portal, business,
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.3%2B-green)
-![Release](https://img.shields.io/badge/Version-1.9.2-orange)
+![Release](https://img.shields.io/badge/Version-1.9.4-orange)
 ![License](https://img.shields.io/badge/License-GPLv3-red)
 
 ---
@@ -20,6 +20,10 @@ Version **1.9.0** added **Categories vs Specific items** selection, Slider-style
 Version **1.9.1** uses Joomla native package updates only (`pkg_devartwidgets`, site client). Existing sites should install a `1.9.1` or later package ZIP once. Later versions are found by Joomla Update.
 
 Version **1.9.2** adds administrator and site language packs for Greek, French, German, Spanish, Italian, and Portuguese.
+
+Version **1.9.3** exposes Access and Language on the widget Basic tab and centers the widget edit footer like DevArt Slider.
+
+Version **1.9.4** aligns admin UX with DevArt Slider, adds the **Custom items** data source (inline list + native Joomla Media Manager), and supports per-item **Image/Video** media with poster and Play/Pause or None controls.
 
 Built specifically for Joomla 6 and PHP 8.3+ with strict typing, modern MVC architecture, and enterprise-oriented performance principles.
 
@@ -131,6 +135,19 @@ Video source supports:
 
 Video-specific administrator options are displayed automatically while unrelated article-only options are hidden.
 
+### Custom Items
+
+Inline custom content for a single widget, without a reusable Custom List.
+
+Features:
+
+- Slider-like repeatable list (add / remove / move)
+- Native Joomla Media Manager
+- Per-item media type: Image or Video
+- Optional poster image for video items
+- Per-item video controls: Play/Pause or None
+- Title, subtitle, badge, link, author, and custom date fields
+
 ### Custom Lists
 
 Reusable lists that mix native sources in one widget.
@@ -160,6 +177,7 @@ Supported sources:
 - DevArt Business
 - DevArt Events
 - DevArt Video
+- Custom Items
 - Custom Lists
 
 All frontend templates automatically work across every supported content source without requiring separate template implementations.
@@ -424,11 +442,39 @@ Not Supported:
 
 ## Current Version
 
-### 1.9.2
+### 1.9.4
 
 ---
 
 ## Changelog Highlights
+
+### v1.9.4
+
+Changed:
+
+- widget edit form controls use a capped width like DevArt Slider
+- widget edit Data tab field order matches DevArt Slider
+- DevArt Events source includes Featured handling like DevArt Slider
+- DevArt Business source includes All/Selected categories, Featured handling, and Ordering like DevArt Slider
+- source type label Custom renamed to Custom List
+- Content tab sits next to Data with Simple/Advanced options; font sizes moved into Content Advanced; Typography keeps responsive mobile text only
+- Content Advanced includes Author/Date extras and responsive mobile text; Typography tab removed
+- layout columns/gap/radius live under Template (per template); Layout tab removed
+- Orange theme added; new widgets default to Red; Custom theme starts with working color defaults
+- Widgets list filters and Trash/Delete behaviour aligned with DevArt Slider
+- Admin headers without box shadow; Import Widgets button matches DevArt Slider
+- Custom items Data source with inline repeatable list and native Joomla media
+- Custom items Image/Video media type with poster and per-item Play/Pause or None controls
+
+### v1.9.3
+
+Added:
+
+- Access and Language fields on the widget Basic tab
+
+Changed:
+
+- widget edit administrator footer is centered like DevArt Slider
 
 ### v1.9.2
 
