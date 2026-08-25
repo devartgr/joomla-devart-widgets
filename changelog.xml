@@ -4,6 +4,30 @@
     <changelog>
         <element>pkg_devartwidgets</element>
         <type>package</type>
+        <version>1.9.5</version>
+
+        <addition>
+            <item>Added administrator, site, module, plugin and package language files for Czech, Dutch, Polish, Russian, Ukrainian, Japanese, Turkish and Chinese (Simplified)</item>
+            <item>Redesigned administrator Dashboard with Video-style hub cards (New Widget, Widgets, Custom Lists, Options, Modules, Templates)</item>
+            <item>Modules hub card opens the Joomla Module Manager filtered to mod_devartwidget</item>
+        </addition>
+
+        <change>
+            <item>Header / Footer tab fields are grouped with light fieldset frames</item>
+            <item>Content tab field groups appear only in Advanced mode; Simple stays a flat list</item>
+            <item>Removed the Templates list note about preview images</item>
+            <item>Dashboard cache maintenance buttons and statistics blocks remain below the hub cards</item>
+        </change>
+
+        <note>
+            <item>Packaged languages: en-GB, el-GR, fr-FR, de-DE, es-ES, it-IT, pt-PT, cs-CZ, nl-NL, pl-PL, ru-RU, uk-UA, ja-JP, tr-TR, zh-CN</item>
+            <item>Requires Joomla 6.0+ and PHP 8.3.0+</item>
+        </note>
+    </changelog>
+
+    <changelog>
+        <element>pkg_devartwidgets</element>
+        <type>package</type>
         <version>1.9.4</version>
 
         <change>
