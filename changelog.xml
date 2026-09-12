@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelogs>
+<changelog>
+        <element>pkg_devartwidgets</element>
+        <type>package</type>
+        <version>1.9.6</version>
+
+        <fix>
+            <item>Fixed widget edit form crash when DevArt Events, DevArt Video or DevArt Business category tables are missing</item>
+        </fix>
+
+        <change>
+            <item>Optional integration category fields now check component and table availability before querying</item>
+            <item>Events and Business frontend sources fail closed with empty results when required tables are absent</item>
+            <item>Installer no longer extends Joomla InstallerScript (DevArt pattern): safe same-line package downgrades allowed; only PHP and Joomla minimums are enforced</item>
+        </change>
+
+        <note>
+            <item>Requires Joomla 6.0+ and PHP 8.3.0+</item>
+        </note>
+    </changelog>
 
     <changelog>
         <element>pkg_devartwidgets</element>
