@@ -4,6 +4,22 @@
     <changelog>
         <element>pkg_devartwidgets</element>
         <type>package</type>
+        <version>1.9.8</version>
+
+        <change>
+            <item>Resolve frontend item routes after cache so URLs use the current menu Itemid</item>
+            <item>Replace MySQL-only FIELD()/RAND()/GROUP_CONCAT with portable PHP ordering and primary-category joins</item>
+            <item>Prefer DatabaseInterface type hints on Tables, LanguageScope, ArticleQueryBuilder and EventsSource</item>
+        </change>
+
+        <note>
+            <item>Requires Joomla 6.0+ and PHP 8.3.0+</item>
+        </note>
+    </changelog>
+
+    <changelog>
+        <element>pkg_devartwidgets</element>
+        <type>package</type>
         <version>1.9.7</version>
 
         <change>
