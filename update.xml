@@ -6,12 +6,12 @@
         <element>pkg_devartwidgets</element>
         <type>package</type>
         <client>site</client>
-        <version>1.9.6</version>
+        <version>1.9.7</version>
         <infourl title="DevArt Widgets">https://github.com/devartgr/joomla-devart-widgets</infourl>
         <downloads>
-            <downloadurl type="full" format="zip">https://github.com/devartgr/joomla-devart-widgets/releases/download/v1.9.6/pkg_devartwidgets_v1.9.6.zip</downloadurl>
+            <downloadurl type="full" format="zip">https://github.com/devartgr/joomla-devart-widgets/releases/download/v1.9.7/pkg_devartwidgets_v1.9.7.zip</downloadurl>
         </downloads>
-        <sha256>1348c452d6792f3dc4bcb5c129cc07264bab170f69c97fd6add6e39afcf6a296</sha256>
+        <sha256>1ed2648448051a1356b5571169e0a53efecc1a8c9d572d40243736ae4e615e23</sha256>
         <tags>
             <tag>stable</tag>
         </tags>
