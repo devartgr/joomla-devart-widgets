@@ -1,5 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelogs>
+
+    <changelog>
+        <element>pkg_devartwidgets</element>
+        <type>package</type>
+        <version>1.9.7</version>
+
+        <change>
+            <item>Replaced deprecated AbstractView::get() with direct model calls in administrator views</item>
+            <item>Replaced HTMLHelper behavior helpers with WebAssetManager form.validate, keepalive and multiselect</item>
+            <item>Replaced HTMLHelper stylesheet/script loading with WebAssetManager for administrator assets</item>
+            <item>Corrected com_devartwidgets media asset URIs in joomla.asset.json for HTMLHelper mediaPath resolution</item>
+            <item>Fixed Custom Lists and Items list Unpublish by branching on getTask() inside publish() (AdminController task map)</item>
+            <item>Aligned administrator sidebar active submenu color to DevArt teal</item>
+            <item>Require published and accessible article categories for every article selection mode</item>
+            <item>Replaced admin template document property and site/controller input access with getDocument() / Factory::getApplication()->getInput()</item>
+            <item>Hardened cache file deletion path checks and null-safe guest view-level resolution</item>
+            <item>Article cache no longer keys on current article; exclude-current applied after fetch</item>
+            <item>Cap day-sensitive cache TTL at local midnight; re-check article visibility on cache hit</item>
+            <item>Business subcategory expansion keeps only published/accessible parents</item>
+            <item>Events schema fallback fails closed when categories are selected</item>
+            <item>Widget payload cache uses Joomla Cache API (group com_devartwidgets) with generation invalidation like DevArt News</item>
+            <item>Custom Lists resolve items in bulk per source type instead of N+1 per row</item>
+            <item>Shared IntegrationAvailability memo for optional Events/Business/Video table checks</item>
+            <item>Safer frontend thumbnails: memory budget, atomic write, white transparency backdrop</item>
+            <item>Article date filters use the site timezone against UTC-stored created values</item>
+            <item>Frontend empty states and default Read more use language strings</item>
+            <item>Content plugin skips com_finder indexer contexts for widget shortcodes</item>
+            <item>Added Joomla update schema path admin/sql/updates/mysql (1.9.7 baseline)</item>
+            <item>Publish no longer clears checkout locks; permanent widget and custom-list deletes use DB transactions</item>
+            <item>Custom item link_target and readmore_text drive frontend anchors (noopener noreferrer on _blank)</item>
+            <item>Module caching defaults to off; Cache Time is shown only when Caching is not No caching</item>
+            <item>Prefer createQuery(), DatabaseInterface, and User::getAuthorisedViewLevels() over deprecated helpers</item>
+        </change>
+
+        <note>
+            <item>Joomla 7 preparation: remove APIs announced for removal; keep Joomla 6 compatibility</item>
+            <item>Requires Joomla 6.0+ and PHP 8.3.0+</item>
+        </note>
+    </changelog>
+
 <changelog>
         <element>pkg_devartwidgets</element>
         <type>package</type>
