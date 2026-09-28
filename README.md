@@ -4,7 +4,7 @@ Professional Joomla 6 widgets package for editorial, magazine, portal, business,
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.3%2B-green)
-![Release](https://img.shields.io/badge/Version-1.9.7-orange)
+![Release](https://img.shields.io/badge/Version-1.9.8-orange)
 ![License](https://img.shields.io/badge/License-GPLv3-red)
 
 ---
@@ -30,6 +30,8 @@ Version **1.9.5** expands packaged languages to 15 locales, redesigns the admini
 Version **1.9.6** fixes the widget edit form crash on sites without DevArt Events, DevArt Video or DevArt Business installed, and allows safe same-line package downgrades (PHP/Joomla minimums only).
 
 Version **1.9.7** hardens security and cache (article category ACL, Joomla Cache API with generation invalidation, day-boundary TTL), improves Custom Lists / thumbnails performance, adds site-timezone date filters, frontend i18n empty/readmore, custom item link targets, and Joomla 7 API prep.
+
+Version **1.9.8** resolves frontend routes after cache hydrate (correct menu Itemid), replaces MySQL-only FIELD()/RAND()/GROUP_CONCAT with portable PHP ordering, and prefers DatabaseInterface type hints.
 
 Built specifically for Joomla 6 and PHP 8.3+ with strict typing, modern MVC architecture, and enterprise-oriented performance principles.
 
