@@ -4,6 +4,55 @@
     <changelog>
         <element>pkg_devartwidgets</element>
         <type>package</type>
+        <version>1.9.9</version>
+
+        <change>
+            <item>Sync Version::VERSION with package manifests and validate the constant in scripts/validate.php</item>
+            <item>Custom Lists re-check list publish state and per-source item visibility on every response, including cache hits</item>
+            <item>Custom List cache stores a page-independent payload; exclude_current is applied after cache read</item>
+            <item>Nested source caches are bypassed while resolving Custom List rows</item>
+            <item>Video subcategory expansion keeps only published/accessible/language-valid categories</item>
+            <item>Custom List item replace runs inside a DB transaction with cache invalidation after success</item>
+            <item>Widget cache payloads store absolute expires_at so midnight-capped TTLs cannot be revived</item>
+            <item>Cache invalidation always bumps generation immediately</item>
+            <item>Fix relative URL validation regex delimiter for forms like index.php?option=…</item>
+            <item>Safe import exception boundary with logged unexpected failures</item>
+            <item>Align export/import at a shared 2 MiB payload limit</item>
+            <item>Cap custom items and settings JSON size with shared normalisation</item>
+            <item>Cache integration table-list checks via the shared IntegrationAvailability helper</item>
+            <item>Business category filter uses EXISTS instead of join plus GROUP BY on introtext</item>
+            <item>Share widget cache generation counter across instances for the same request</item>
+            <item>Import preloads existing widget/list IDs and aliases into memory sets</item>
+            <item>Article visibility re-check runs only on cache hits</item>
+            <item>Throttled logging for unexpected WidgetCache failures</item>
+            <item>Strip widget shortcodes from intros; limit content-plugin shortcodes per article</item>
+            <item>Custom List row load cap uses a named MAX_LIST_ITEMS constant</item>
+            <item>Re-check Business/Events/Video visibility on cache hits</item>
+            <item>Format item dates after cache hydrate via ItemDateHydrator</item>
+            <item>Thumbnail resolver memos unwritable dirs and failed targets</item>
+            <item>Deduplicate widget/list aliases on install/update and add UNIQUE indexes</item>
+            <item>Retry widget/list saves on concurrent UNIQUE alias collisions</item>
+            <item>Custom Lists use bounded overfetch (limit×5) then slice to the widget limit</item>
+            <item>Clear cache runs Joomla cache garbage collection after the group clean</item>
+            <item>Extract widget settings save normalisation into WidgetSettingsNormalizer</item>
+            <item>Reuse DatabaseInterface via constructors in BusinessSource and EventsSource</item>
+            <item>Centralise cache and thumbnail paths via WidgetPaths</item>
+            <item>Share one ImageResolver per renderer via BaseWidgetRenderer</item>
+            <item>Reuse DatabaseInterface via constructor in VideoSource</item>
+            <item>Request-static DB memo and null-safe view levels in CachedItemVisibility</item>
+            <item>Inject DatabaseInterface into ArticleSource and CustomListSource</item>
+            <item>Null-safe identity in WidgetRepository; WidgetModel uses getDatabase() for alias/settings</item>
+            <item>Complete language key parity across all 15 packaged locales</item>
+        </change>
+
+        <note>
+            <item>Requires Joomla 6.0+ and PHP 8.3.0+</item>
+        </note>
+    </changelog>
+
+    <changelog>
+        <element>pkg_devartwidgets</element>
+        <type>package</type>
         <version>1.9.8</version>
 
         <change>

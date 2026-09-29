@@ -4,7 +4,7 @@ Professional Joomla 6 widgets package for editorial, magazine, portal, business,
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.3%2B-green)
-![Release](https://img.shields.io/badge/Version-1.9.8-orange)
+![Release](https://img.shields.io/badge/Version-1.9.9-orange)
 ![License](https://img.shields.io/badge/License-GPLv3-red)
 
 ---
@@ -32,6 +32,8 @@ Version **1.9.6** fixes the widget edit form crash on sites without DevArt Event
 Version **1.9.7** hardens security and cache (article category ACL, Joomla Cache API with generation invalidation, day-boundary TTL), improves Custom Lists / thumbnails performance, adds site-timezone date filters, frontend i18n empty/readmore, custom item link targets, and Joomla 7 API prep.
 
 Version **1.9.8** resolves frontend routes after cache hydrate (correct menu Itemid), replaces MySQL-only FIELD()/RAND()/GROUP_CONCAT with portable PHP ordering, and prefers DatabaseInterface type hints.
+
+Version **1.9.9** hardens Custom List visibility and cache behaviour, adds UNIQUE widget/list aliases, shared settings normalisation, path helpers, renderer ImageResolver sharing, DatabaseInterface injection across sources, and completes language key parity for all 15 packaged locales.
 
 Built specifically for Joomla 6 and PHP 8.3+ with strict typing, modern MVC architecture, and enterprise-oriented performance principles.
 
@@ -347,6 +349,14 @@ Packaged translations:
 - Spanish (`es-ES`)
 - Italian (`it-IT`)
 - Portuguese (`pt-PT`)
+- Czech (`cs-CZ`)
+- Dutch (`nl-NL`)
+- Polish (`pl-PL`)
+- Russian (`ru-RU`)
+- Ukrainian (`uk-UA`)
+- Japanese (`ja-JP`)
+- Turkish (`tr-TR`)
+- Chinese Simplified (`zh-CN`)
 
 Coverage includes the component (administrator and site), module, content plugin, and package.
 
