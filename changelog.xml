@@ -4,6 +4,27 @@
     <changelog>
         <element>pkg_devartwidgets</element>
         <type>package</type>
+        <version>2.0.0</version>
+
+        <change>
+            <item>Soft cutover: Options default source_engine=plugin; installer preserves explicit legacy/shadow/plugin</item>
+            <item>Build-time embed of pinned pkg_devartsources 1.0.0 (shared with DevArt Slider); installs/upgrades when missing/older, never downgrades</item>
+            <item>Shared Sources plugin engine for Articles, DevArt Business, Events, and Video with automatic legacy fallback</item>
+            <item>Neutral SourceRequest filter mapping for shared providers</item>
+            <item>Plugin cache TTL respects operator cache_minutes ceiling; empty-store parity; display fields in cache key</item>
+            <item>Host CachedSource for plugin providers (ACL/language/version key + warm visibility recheck)</item>
+            <item>SafeLog hardening; unknown source_type → EmptySource; Events non-indexed fetch cap 1000</item>
+            <item>Dashboard shared-source diagnostics and SourceRegistry conflict status</item>
+            <item>Installer excludes update.xml from the install ZIP (circular SHA-256 safe)</item>
+            <item>Legacy sources retained until a later M7 plugin-only soak; host-local custom / custom_items stay local</item>
+            <item>Joomla 6+ / PHP 8.3+; 15 packaged languages unchanged</item>
+        </change>
+    </changelog>
+
+
+    <changelog>
+        <element>pkg_devartwidgets</element>
+        <type>package</type>
         <version>1.9.9</version>
 
         <change>
