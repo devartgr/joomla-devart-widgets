@@ -4,6 +4,31 @@
     <changelog>
         <element>pkg_devartwidgets</element>
         <type>package</type>
+        <version>2.0.1</version>
+        <change>
+            <item>M7: plugin-only for shared Articles/Business/Events/Video — remove in-product legacy sources, shadow compare, Options engine switch, and legacy fallback</item>
+            <item>Installer forces source_engine=plugin on update</item>
+            <item>Fail-closed empty items when Sources library/provider is unavailable</item>
+            <item>Custom Lists resolve nested shared rows via SourceEngine (plugin-only)</item>
+            <item>Re-pin Sources companion to 1.0.1 (same SHA as Slider 2.0.2)</item>
+            <item>Thumb retention/clear includes .webp/.jpeg; Dashboard counts them</item>
+            <item>VisibilityRulesTest expectations match empty-string publish windows; remove dead admin/script.php</item>
+            <item>Memoize video table columns on warm recheck; CustomList cache key omits template/theme</item>
+            <item>Admin Status column uses jgrid published icons (Widgets, Custom Lists, Items)</item>
+            <item>Frontend Play/Pause video aria-label from site language data attribute</item>
+            <item>AuditTimestampsTrait getDatabase(); PHPStan path for Joomla 6.2.0 workspace</item>
+        </change>
+        <note>
+            <item>Host-local custom / custom_items remain in-product</item>
+            <item>No official update-server downgrade; keep 2.0.0 ZIP on GitHub for manual rollback only</item>
+            <item>No database schema changes</item>
+            <item>Requires Joomla 6.0+ and PHP 8.3.0+</item>
+        </note>
+    </changelog>
+
+    <changelog>
+        <element>pkg_devartwidgets</element>
+        <type>package</type>
         <version>2.0.0</version>
 
         <change>
