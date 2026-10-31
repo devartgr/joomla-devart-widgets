@@ -4,7 +4,7 @@ Professional Joomla 6 widgets package for editorial, magazine, portal, business,
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.3%2B-green)
-![Release](https://img.shields.io/badge/Version-2.0.0-orange)
+![Release](https://img.shields.io/badge/Version-2.0.1-orange)
 ![License](https://img.shields.io/badge/License-GPLv3-red)
 
 ---
@@ -15,19 +15,19 @@ DevArt Widgets is a modern Joomla 6 native widget builder designed for editorial
 
 Create professional frontend content blocks using multiple templates, multiple native content sources, Custom Lists, cache-first rendering, production-safe import/export tools, responsive typography controls, template-aware customization, and modern Joomla 6 architecture.
 
-Version **2.0.0** activates the shared **DevArt Sources** plugin engine by default (`source_engine=plugin`) with automatic legacy fallback. The install package embeds a pinned `pkg_devartsources` companion (same pin as DevArt Slider 2.0.0) and installs or upgrades it when missing or older. Host-local Custom Items / Custom Lists stay in-product. Explicit Options choices (`legacy` / `shadow` / `plugin`) are preserved on update.
+Version **2.0.1** completes the **M7 plugin-only** cut for shared Articles / Business / Events / Video sources (legacy, shadow, and Options engine switch removed). The install package embeds pinned `pkg_devartsources` **1.0.1** (same pin as DevArt Slider **2.0.2**) and installs or upgrades it when missing or older — never downgrades. Host-local Custom Items / Custom Lists stay in-product. Shared sources fail closed when Sources is unavailable.
 
 Built specifically for Joomla 6 and PHP 8.3+ with strict typing, modern MVC architecture, and enterprise-oriented performance principles.
 
 ---
 
-## What’s new in 2.0.0
+## What’s new in 2.0.1
 
-- Soft cutover to shared Sources providers (Articles, DevArt Business, Events, Video)
-- Build-time bundled `pkg_devartsources` 1.0.0 — one ZIP install for Widgets + Sources
-- Plugin cache TTL ceiling, empty-store parity, warm visibility recheck
-- Safer fail-closed paths (unknown source types, SafeLog, diagnostics on Dashboard)
-- Legacy engines retained as fallback until a later soak-based cleanup
+- M7 plugin-only for shared Articles / Business / Events / Video (no legacy/shadow fallback)
+- Re-pin embedded `pkg_devartsources` to **1.0.1** (same as Slider 2.0.2)
+- Admin Status columns use jgrid published icons; Play/Pause video aria-label from site language
+- Thumb retention clears `.webp`/`.jpeg`; warm-path and cache-key hygiene
+- Keep **2.0.0** on GitHub Releases for **manual** rollback only — no official update-server downgrade
 
 ---
 
@@ -39,17 +39,17 @@ Built specifically for Joomla 6 and PHP 8.3+ with strict typing, modern MVC arch
 ## Package
 
 - Package: `pkg_devartwidgets`
-- Version: `2.0.0`
-- SHA-256: `758b2db59a977306ef6b2d98721165d4a4ab4f83a08f435240a891c814c6d880`
+- Version: `2.0.1`
+- SHA-256: `e783fdb4f3bea0528048bdae36a1d41e36041dc94a1d377ad94b9267b0218f97`
 - Extensions: `com_devartwidgets`, `mod_devartwidget`, `plg_content_devartwidgets`
-- Bundled companion: `pkg_devartsources` 1.0.0
+- Bundled companion: `pkg_devartsources` 1.0.1
 - Languages: 15 locales (`en-GB`, `el-GR`, `fr-FR`, `de-DE`, `es-ES`, `it-IT`, `pt-PT`, `cs-CZ`, `nl-NL`, `pl-PL`, `ru-RU`, `uk-UA`, `ja-JP`, `tr-TR`, `zh-CN`)
 
 ## Install / Update
 
-1. Install or update `pkg_devartwidgets_v2.0.0.zip` via Joomla Installer (or Joomla Update when advertised).
-2. Sources is installed/upgraded automatically from the bundled companion when needed.
-3. Confirm Components → DevArt Widgets → Options → **Source engine** is `Plugin` (or keep your explicit choice).
+1. Install or update `pkg_devartwidgets_v2.0.1.zip` via Joomla Installer (or Joomla Update when advertised).
+2. Sources is installed/upgraded automatically from the bundled companion when needed (never downgraded).
+3. Shared sources require DevArt Sources; Custom Items / Custom Lists remain host-local.
 
 ## Links
 
