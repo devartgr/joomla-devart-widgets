@@ -4,6 +4,21 @@
     <changelog>
         <element>pkg_devartwidgets</element>
         <type>package</type>
+        <version>2.0.2</version>
+        <fix>
+            <item>Remove orphan DevArt Sources Updates site on install/update (companion-only; private update.xml URL 404)</item>
+            <item>Pin Sources companion 1.0.2 (no public updateservers; cleans stale update sites)</item>
+        </fix>
+        <note>
+            <item>No database schema changes</item>
+            <item>Requires Joomla 6.0+ and PHP 8.3.0+</item>
+        </note>
+    </changelog>
+
+
+    <changelog>
+        <element>pkg_devartwidgets</element>
+        <type>package</type>
         <version>2.0.1</version>
         <change>
             <item>M7: plugin-only for shared Articles/Business/Events/Video — remove in-product legacy sources, shadow compare, Options engine switch, and legacy fallback</item>
@@ -32,20 +47,47 @@
         <version>2.0.0</version>
 
         <change>
-            <item>Soft cutover: Options default source_engine=plugin; installer preserves explicit legacy/shadow/plugin</item>
-            <item>Build-time embed of pinned pkg_devartsources 1.0.0 (shared with DevArt Slider); installs/upgrades when missing/older, never downgrades</item>
-            <item>Shared Sources plugin engine for Articles, DevArt Business, Events, and Video with automatic legacy fallback</item>
-            <item>Neutral SourceRequest filter mapping for shared providers</item>
-            <item>Plugin cache TTL respects operator cache_minutes ceiling; empty-store parity; display fields in cache key</item>
-            <item>Host CachedSource for plugin providers (ACL/language/version key + warm visibility recheck)</item>
-            <item>SafeLog hardening; unknown source_type → EmptySource; Events non-indexed fetch cap 1000</item>
-            <item>Dashboard shared-source diagnostics and SourceRegistry conflict status</item>
-            <item>Installer excludes update.xml from the install ZIP (circular SHA-256 safe)</item>
-            <item>Legacy sources retained until a later M7 plugin-only soak; host-local custom / custom_items stay local</item>
-            <item>Joomla 6+ / PHP 8.3+; 15 packaged languages unchanged</item>
+            <item>2.0.0 local RC: soft cutover source_engine=plugin (preserve explicit legacy/shadow/plugin); build-time embed pinned pkg_devartsources 1.0.0 matching Slider triad SHA</item>
+            <item>AR: companions/ Sources ZIP + SHA lock; installer installs/upgrades when missing/older (never downgrades; not a package child)</item>
+            <item>AQ: plugin cache respects cache_minutes ceiling; empty-store parity with legacy; display fields in cache key; FallbackStats request dedupe</item>
+            <item>AP: SafeLog class-only with sanitized reason token; unknown source_type → EmptySource; Events non-indexed fetch cap 1000; dashboard duplicate provider status</item>
+            <item>AN: read-only shared source diagnostics on Dashboard (engine, library, providers, Events date index, fallback counters)</item>
+            <item>AN: host-side CachedSource for plugin providers (ACL/language/version cache key + warm visibility)</item>
+            <item>AM: installer preserves explicit source_engine legacy/shadow/plugin on update</item>
+            <item>AM: exclude update.xml from install ZIP to avoid circular SHA-256</item>
+            <item>Activate source_engine=plugin as package default after shadow soak; installer postflight sets Options to plugin</item>
+            <item>Fix ItemRouteHydrator dynamic RouteHelper calls (Events/Video/Business URLs)</item>
+            <item>M4-2B: component Options expose source_engine (legacy/shadow/plugin); soft default plugin for 2.0.0</item>
+            <item>PluginSourceAdapter maps Events (devartevents) category/time filters for shared pkg_devartsources Events provider</item>
+            <item>PluginSourceAdapter maps Business (devartbusiness) filters/ordering/random overfetch for shared pkg_devartsources Business provider</item>
+            <item>PluginSourceAdapter maps Video (devartvideo) filters/ordering for shared pkg_devartsources Video provider; Articles-only exclude_current remains host-owned</item>
+            <item>Migrate Events onto CachedSource (EmptyShortTtl + day-sensitive policy) with unit-tested EventsCacheRules</item>
+            <item>Introduce CachedSource decorator + SourceCachePolicy; migrate Video and Business onto CacheableSourceInterface</item>
+            <item>Finish remaining small quality items: Items URL field text+string; module/plugin SafeLog on outer catch; WidgetCache remember() single-flight fill wired into all cached sources</item>
+            <item>Preserve widget custom_list_id when the assigned Custom List is unpublished; clear widget refs on list delete; zero orphan ids on save when the list row is missing</item>
+            <item>Share SafeLocalMediaPath for Custom Items admin+FE (local images/ only; block remote,//,data,:,..,bad extensions); drop unused WidgetModel cleanLocal helpers</item>
+            <item>Header/footer link admin fields accept SafeHrefUrl-compatible relative/hash/query values (text + string filter; server still validates)</item>
+            <item>Align Custom Items frontend link validation with SafeHrefUrl so relative/hash/query links saved in admin still render</item>
+            <item>Persist cleared Custom Items (empty omitted subform) as [] instead of restoring previous rows on merge</item>
+            <item>Hide overlay/image admin fields without disabling them so edited values still POST after a template switch; show Modified on widgets and custom lists</item>
+            <item>Persist created/modified audit fields on store; restore edit form userState; empty multi-select POST sentinel for cleared selections</item>
+            <item>Point Joomla Cache API cachebase at JPATH_ROOT/cache and align pending generation flush with News onlyIfPending</item>
+            <item>Share widget cache under JPATH_ROOT/cache/com_devartwidgets so admin Save and frontend read the same generation</item>
+            <item>Add local PHPStan tooling (Composer, phpstan.neon level 5, baseline)</item>
+            <item>Pass DatabaseInterface through SourceFactory into source constructors</item>
+            <item>Share DatabaseInterface from ArticleSource into ArticleQueryBuilder</item>
+            <item>Move dashboard data preparation into Dashboard HtmlView (tmpl presentation-only)</item>
+            <item>Inject DatabaseInterface into WidgetRepository with constructor DI</item>
+            <item>Pass shared database from module Dispatcher, content plugin, and site WidgetModel</item>
+            <item>Modernise plg_content_devartwidgets to services-only entry (remove legacy root PHP bootstrap)</item>
+            <item>Boot com_devartwidgets before content shortcode rendering</item>
+            <item>Keep CMSPlugin construction without deprecated DispatcherInterface injection</item>
+            <item>Package postflight removes obsolete module and plugin bootstrap files after upgrade</item>
+            <item>Modernise mod_devartwidget to AbstractModuleDispatcher and services/provider.php</item>
+            <item>Remove legacy mod_devartwidget.php entry and global helper.php</item>
+            <item>Add 2.0.0 MySQL schema stub (no DDL)</item>
         </change>
     </changelog>
-
 
     <changelog>
         <element>pkg_devartwidgets</element>
